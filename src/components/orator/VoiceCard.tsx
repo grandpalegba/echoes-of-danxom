@@ -1,5 +1,6 @@
 import { Star, Award } from "lucide-react";
 import AudioPlayer from "./AudioPlayer";
+import ImpactRating from "@/components/ui/ImpactRating";
 import type { AudioRecording } from "@/data/profiles";
 
 interface VoiceCardProps {
@@ -22,13 +23,7 @@ const VoiceCard = ({ recording }: VoiceCardProps) => (
       </div>
     </div>
     <AudioPlayer duration={recording.duration} />
-    <div className="flex items-center gap-4 text-sm text-muted-foreground">
-      <span className="flex items-center gap-1">
-        <Star className="w-3.5 h-3.5 text-primary fill-primary" />
-        {recording.averageRating.toFixed(1)} / 10
-      </span>
-      <span>{recording.votes} votes</span>
-    </div>
+    <ImpactRating currentRating={recording.averageRating} totalVotes={recording.votes} />
   </div>
 );
 
