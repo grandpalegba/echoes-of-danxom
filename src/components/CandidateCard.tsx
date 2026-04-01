@@ -9,7 +9,7 @@ interface CandidateCardProps {
 const CandidateCard = ({ candidate }: CandidateCardProps) => {
   return (
     <Link
-      to={`/candidat/${candidate.id}`}
+      to={`/profil/${candidate.id}`}
       className="group block rounded-xl overflow-hidden bg-card border border-border shadow-sm hover:shadow-md transition-shadow animate-fade-in"
     >
       <div className="aspect-[4/5] overflow-hidden">
